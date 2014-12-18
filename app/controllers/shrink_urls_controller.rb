@@ -1,6 +1,7 @@
 class ShrinkUrlsController < ApplicationController 
 
 	def index
+		@shrink_urls = ShrinkUrl.all
 	end
 
 	def show

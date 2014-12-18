@@ -12,6 +12,7 @@ $(document).ready(function() {
 			},
 			success: function(response){
 				console.log(response);
+				$(".display-result").append("<li>"+response.original_url+": "+response.short_url+"</li>");
 			}
 
 		});
