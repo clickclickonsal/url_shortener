@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :shrink_urls, only: [:index, :show, :create, :destroy]
+  resources :shrink_urls, only: [:index, :show, :create]
 
   root "shrink_urls#index"
   # The priority is based upon order of creation: first created -> highest priority.
