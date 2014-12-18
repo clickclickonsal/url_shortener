@@ -1,12 +1,3 @@
 <script>
-	console.log("<%= @shrink_url.original_url %>")
-	if("<%= @shrink_url.original_url %>".slice(7) === "http://"){
-		window.location.href="<%= @shrink_url.original_url %>";
-	}
-	else if("<%= @shrink_url.original_url %>".slice(8) == "https://"){
-		window.location.href="<%= @shrink_url.original_url %>";
-	}
-	else{
-		window.location.href="https://<%= @shrink_url.original_url %>"
-	}
+	window.location.href="https://<%= @shrink_url.original_url %>"
 </script>

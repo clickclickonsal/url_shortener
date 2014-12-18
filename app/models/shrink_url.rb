@@ -4,7 +4,7 @@ class ShrinkUrl < ActiveRecord::Base
   CODE_LENGTH = 6
 
 	def self.shorten_url(url)
-		id = (100..1989).to_a.sample / url.length 
+		id = ((100..1989).to_a.sample / url.length)
     code = ""
     while (id > 0) do
       code = CHARSET[id % BASE].chr + code
