@@ -8,7 +8,6 @@ $(document).ready(function() {
 			dataType: "json",
 			data: { shrink_url: { original_url: url }},
 			error: function(){
-
 			},
 			success: function(response){
 				console.log(response);

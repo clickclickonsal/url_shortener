@@ -3,7 +3,7 @@
 	if("<%= @shrink_url.original_url %>".slice(7) === "http://"){
 		window.location.href="<%= @shrink_url.original_url %>";
 	}
-	else if("<%= @shrink_url.original_url %>".slice(8) !== "https://"){
+	else if("<%= @shrink_url.original_url %>".slice(8) == "https://"){
 		window.location.href="<%= @shrink_url.original_url %>";
 	}
 	else{
