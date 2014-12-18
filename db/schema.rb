@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20141218164315) do
   enable_extension "plpgsql"
 
   create_table "shrink_urls", force: true do |t|
-    t.string "orginal_url"
+    t.string "original_url"
     t.string "short_url"
   end
 

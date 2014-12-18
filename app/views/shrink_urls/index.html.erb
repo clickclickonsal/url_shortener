@@ -1,1 +1,15 @@
-"Hello World"
+<div class="form-container">
+	<h1>Shorten Your URL Here!</h1>
+	<form class="original-url-form">
+		<input id="original-url" type="text" name="input-original-url" placeholder="Paste a link to shorten it!">
+    <input type="submit" id="submit-search" value="Submit"></input>
+	</form>
+</div>
+
+<div>
+	<ul class="display-result">
+		<% @shrink_urls.each do |url| %>
+			<li ><a href="/shrink_urls/<%= url.id %>"><%= url.original_url %>: localhost:3000/shrink_urls/<%= url.short_url %></a></li>
+		<% end %>
+	</ul>
+</div>
