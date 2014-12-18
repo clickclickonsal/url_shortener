@@ -5,7 +5,7 @@ class ShrinkUrlsController < ApplicationController
 	end
 
 	def show
-		
+		@shrink_url = ShrinkUrl.find_by(params[:short_url])
 	end
 
 	def create
