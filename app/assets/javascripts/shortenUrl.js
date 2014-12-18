@@ -12,7 +12,7 @@ $(document).ready(function() {
 			},
 			success: function(response){
 				console.log(response);
-				$(".display-result").append("<li>"+response.original_url+": "+response.short_url+"</li>");
+				$(".display-result").append("<li ><a href='/shrink_urls/"+response.id+"'>"+response.original_url+": /shrink_urls/"+response.short_url+"</a></li>");
 			}
 
 		});

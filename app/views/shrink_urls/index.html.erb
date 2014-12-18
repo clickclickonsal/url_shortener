@@ -9,7 +9,7 @@
 <div>
 	<ul class="display-result">
 		<% @shrink_urls.each do |url| %>
-			<li><a href="/shrink_urls/<%= url.original_url %>">shrink_urls/<%= url.short_url %></a></li>
+			<li ><a href="/shrink_urls/<%= url.id %>"><%= url.original_url %>: /shrink_urls/<%= url.short_url %></a></li>
 		<% end %>
 	</ul>
 </div>
