@@ -1,11 +1,11 @@
 class ShrinkUrlsController < ApplicationController 
 
 	def index
-		@shrink_urls = ShrinkUrl.all
+		@shrink_urls = ShrinkUrl.all.reverse
 	end
 
 	def show
-		@shrink_url =  ShrinkUrl.find_by(params[:short_url]) || ShrinkUrl.find(params[:id])
+		@shrink_url = ShrinkUrl.find_by(params[:short_url])
 	end
 
 	def create
