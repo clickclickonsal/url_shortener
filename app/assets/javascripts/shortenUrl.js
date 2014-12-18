@@ -1,6 +1,10 @@
 $(document).ready(function() {
 
 	function sendUrlToShorten(url) {
+		$.post('/shrink_urls', {shrink_url: url}, function(data, status) {
+			console.log(data);
+		});
+	}
 		// $.ajax({
 		// 	url: "/shrink_urls",
 		// 	type: 'POST',
@@ -14,13 +18,14 @@ $(document).ready(function() {
 		// 	}
 
 		// })
-	};
+	
 
 	$(".original-url-form").on("submit", function(event) {
 		event.preventDefault();
 		var originalUrl = $("#original-url").val();
-  	console.log(originalUrl)
+  	console.log(originalUrl);
 		$("#original-url").val("");
+		sendUrlToShorten(originalUrl);
 	});
 
 });
