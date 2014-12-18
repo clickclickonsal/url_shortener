@@ -1,5 +1,5 @@
-class ShrinkUrls < ApplicationController 
-	
+class ShrinkUrlsController < ApplicationController 
+
 	def index
 	end
 
