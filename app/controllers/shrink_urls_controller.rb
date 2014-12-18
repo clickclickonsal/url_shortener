@@ -8,8 +8,8 @@ class ShrinkUrlsController < ApplicationController
 	end
 
 	def create
-		in_url = {shrink_url: params[:shrink_url]}
-		out_url = ShrinkUrl.shorten_url(in_url[:id])
+		in_url = {original_url: params[:original_url]}
+		out_url = ShrinkUrl.shorten_url(in_url)
 		@shrink_url = ShrinkUrl.new(shrink_url_params.merge(short_url: out_url))
     respond_to do |format|
       if @shrink_url.save
@@ -22,7 +22,9 @@ class ShrinkUrlsController < ApplicationController
     end
 	end
 	
+	private 
+
 	def shrink_url_params 
-		params.require(:shrink_url.permit(:original_url, :short_url))
+		params.require(:shrink_url).permit(:original_url)
 	end
 end
