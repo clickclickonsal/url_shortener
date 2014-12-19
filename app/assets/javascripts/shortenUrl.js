@@ -11,7 +11,7 @@ $(document).ready(function() {
 			},
 			success: function(response){
 				console.log(response);
-				$(".display-result").prepend("<li ><a href='/shrink_urls/"+response.id+"'>"+response.original_url+": /shrink_urls/"+response.short_url+"</a></li>");
+				$(".display-result").prepend("<li><a href='/shrink_urls/"+response.short_url+"'><span class='original'>Original Url: </span><span class='links'>"+response.original_url+"</span><br/><span class='short'>Short Url: </span><span class='links'>localhost:3000/shrink_urls/"+ response.short_url+"</span></a></li>");
 			}
 
 		});

@@ -5,8 +5,12 @@ class ShrinkUrlsController < ApplicationController
 	end
 
 	def show
-		@shrink_url = ShrinkUrl.find(params[:id]).original_url
-		redirect_to @shrink_url
+		@shrink_url = ShrinkUrl.find_by(short_url: params[:id]).original_url
+		if @shrink_url[0..6] == "http://" || @shrink_url[0..7] == "https://"
+			redirect_to "#{@shrink_url}"
+		else
+			redirect_to "http://#{@shrink_url}"
+		end
 	end
 
 	def create

@@ -9,8 +9,8 @@
 <div class="result-container">
 	<ul class="display-result">
 		<% @shrink_urls.each do |url| %>
-			<li><a href="/shrink_urls/<%= url.id %>"><span class="original">Original Url: </span><span class="links"><%= url.original_url %></span><br/>
-			<span class="short">Short Url: </span><span class="links">localhost:3000/shrink_urls/<%= url.id %></span></a></li>
+			<li><a href="/shrink_urls/<%= url.short_url %>"><span class="original">Original Url: </span><span class="links"><%= url.original_url %></span><br/>
+			<span class="short">Short Url: </span><span class="links">localhost:3000/shrink_urls/<%= url.short_url %></span></a></li>
 		<% end %>
 	</ul>
 </div>
